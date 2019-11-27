@@ -15,7 +15,7 @@ export const actions = {
   LOAD_DATA: function ({ commit }) {
     // Sent request to api and get respond data
     axios
-      .get(`http://gateway.marvel.com/v1/public/comics?orderBy=modified&ts=${timestamp}&apikey=${publicKey}&hash=${hash}`)
+      .get(`https://gateway.marvel.com/v1/public/comics?orderBy=modified&ts=${timestamp}&apikey=${publicKey}&hash=${hash}`)
       .then((response) => {
         state.urlTokens = `ts=${timestamp}&apikey=${publicKey}&hash=${hash}`
         Model.data = response.data.data.results

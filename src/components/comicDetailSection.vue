@@ -34,7 +34,6 @@
  margin-top: -70px;
 }
 .profile-pic {
-  /* background-image: url(https://image.tmdb.org/t/p/original${url}); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -179,7 +178,7 @@
           <div class="stories-conainter">
             <div class="story" :key="story.id" v-for="story in getRelatedStories">
               <div class="story-background" v-if="story.thumbnail !== null" :style="{ backgroundImage: `url(${story.thumbnail.path}/portrait_uncanny.${story.thumbnail.extension})` }"/>
-              <div class="story-background" v-else :style="{ backgroundImage: `url(http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_uncanny.jpg)` }"/>
+              <div class="story-background" v-else :style="{ backgroundImage: `url(https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_uncanny.jpg)` }"/>
               <div class="story-name">{{ story.title }}</div>
               <div class="story-description">{{ story.description }}</div>
             </div>
